@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "account-deletion-cancelled",
+  "description": "Deletion cancelled — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "payment-failed-attempt-2",
+  "description": "Second payment attempt failed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,7 @@
+{
+  "category": "team",
+  "name": "team-invitation",
+  "description": "Team workspace invitation with accept CTA.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "task-assigned",
+  "description": "Task assigned to you — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

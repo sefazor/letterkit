@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "custom-reminder",
+  "description": "Custom reminder — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

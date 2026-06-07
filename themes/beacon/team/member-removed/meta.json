@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "member-removed",
+  "description": "member removed email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

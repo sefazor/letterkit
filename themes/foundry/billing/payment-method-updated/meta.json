@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "payment-method-updated",
+  "description": "Payment method updated — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

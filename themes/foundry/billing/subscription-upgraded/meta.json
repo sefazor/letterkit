@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "subscription-upgraded",
+  "description": "Plan upgraded — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

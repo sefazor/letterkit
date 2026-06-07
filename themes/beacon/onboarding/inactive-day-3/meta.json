@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "inactive-day-3",
+  "description": "inactive day 3 email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

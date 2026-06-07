@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "integration-failed",
+  "description": "Slack connection failed — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

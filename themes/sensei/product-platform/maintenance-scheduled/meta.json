@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "maintenance-scheduled",
+  "description": "Scheduled maintenance notice — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "sso-configured",
+  "description": "SSO is configured for your workspace — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

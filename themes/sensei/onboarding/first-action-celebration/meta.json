@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "first-action-celebration",
+  "description": "Nice first step in Acme — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

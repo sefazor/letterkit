@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "integration-disconnected",
+  "description": "Salesforce disconnected — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

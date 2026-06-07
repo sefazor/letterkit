@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "document-shared",
+  "description": "A document was shared with you — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

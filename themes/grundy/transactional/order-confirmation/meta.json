@@ -1,0 +1,7 @@
+{
+  "category": "transactional",
+  "name": "order-confirmation",
+  "description": "Order confirmation with product summary and tracking.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

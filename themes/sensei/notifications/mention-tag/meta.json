@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "mention-tag",
+  "description": "You were mentioned — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

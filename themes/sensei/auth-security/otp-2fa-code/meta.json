@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "otp-2fa-code",
+  "description": "Your Acme 2FA code — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

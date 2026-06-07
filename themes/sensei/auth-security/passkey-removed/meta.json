@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "passkey-removed",
+  "description": "Passkey removed from your account — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

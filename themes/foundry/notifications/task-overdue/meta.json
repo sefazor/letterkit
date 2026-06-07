@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "task-overdue",
+  "description": "Task is overdue — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

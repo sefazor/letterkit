@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "integration-failed",
+  "description": "Slack connection failed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

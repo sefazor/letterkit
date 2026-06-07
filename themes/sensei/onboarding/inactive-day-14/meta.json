@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "inactive-day-14",
+  "description": "Let us help you relaunch — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

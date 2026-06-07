@@ -1,0 +1,9 @@
+{
+  "category": "support-feedback",
+  "name": "feature-request-acknowledged",
+  "description": "Feature request received — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

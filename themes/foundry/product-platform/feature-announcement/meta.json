@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "feature-announcement",
+  "description": "New feature: Scenario Simulator — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "notification",
+  "name": "system-alert",
+  "description": "system alert email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

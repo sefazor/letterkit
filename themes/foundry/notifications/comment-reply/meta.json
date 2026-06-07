@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "comment-reply",
+  "description": "New reply to your comment — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

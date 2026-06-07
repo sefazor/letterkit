@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "2fa-disabled",
+  "description": "Two-factor authentication disabled — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

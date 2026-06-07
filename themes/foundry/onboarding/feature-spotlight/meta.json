@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "feature-spotlight",
+  "description": "Feature spotlight: Smart Rules — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

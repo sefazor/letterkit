@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "maintenance-starting",
+  "description": "Maintenance starting now — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "first-action-celebration",
+  "description": "first action celebration email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "new-device-login",
+  "description": "New device signed in to Acme — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

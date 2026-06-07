@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "we-miss-you",
+  "description": "We miss you at Acme — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

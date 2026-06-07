@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "api-key-created",
+  "description": "New API key created — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

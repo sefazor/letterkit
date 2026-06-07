@@ -1,0 +1,9 @@
+{
+  "category": "support-feedback",
+  "name": "bug-report-acknowledged",
+  "description": "Bug report acknowledged — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "api-key-revoked",
+  "description": "API key revoked — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

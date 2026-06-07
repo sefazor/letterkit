@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "guest-access-granted",
+  "description": "Guest access granted — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

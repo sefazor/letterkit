@@ -1,0 +1,9 @@
+{
+  "category": "notification",
+  "name": "comment-reply",
+  "description": "comment reply email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

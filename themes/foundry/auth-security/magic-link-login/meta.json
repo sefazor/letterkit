@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "magic-link-login",
+  "description": "Your Acme magic sign-in link — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

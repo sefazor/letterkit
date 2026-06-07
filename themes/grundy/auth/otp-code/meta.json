@@ -1,0 +1,9 @@
+{
+  "category": "auth",
+  "name": "otp-code",
+  "description": "otp code email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "api-key-revoked",
+  "description": "API key revoked — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

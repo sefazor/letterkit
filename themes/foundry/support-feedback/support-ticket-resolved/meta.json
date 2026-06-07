@@ -1,0 +1,9 @@
+{
+  "category": "support-feedback",
+  "name": "support-ticket-resolved",
+  "description": "Support ticket resolved — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

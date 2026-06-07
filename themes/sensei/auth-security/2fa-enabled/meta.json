@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "2fa-enabled",
+  "description": "Two-factor authentication enabled — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

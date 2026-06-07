@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "profile-completion-reminder",
+  "description": "Complete your Acme profile — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

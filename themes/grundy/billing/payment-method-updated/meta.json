@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "payment-method-updated",
+  "description": "payment method updated email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

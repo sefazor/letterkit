@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "quota-reset",
+  "description": "Quota reset complete — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

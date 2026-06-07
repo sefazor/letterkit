@@ -1,0 +1,7 @@
+{
+  "category": "product-update",
+  "name": "feature-announcement",
+  "description": "New feature announcement with learn-more CTA.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

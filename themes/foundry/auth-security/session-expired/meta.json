@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "session-expired",
+  "description": "Your Acme session has expired — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

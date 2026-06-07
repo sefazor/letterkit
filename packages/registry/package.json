@@ -1,0 +1,33 @@
+{
+  "name": "@letterkit/registry",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Block manifest and schema for letterkit",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./registry.json": "./registry.json"
+  },
+  "files": ["dist", "registry.json"],
+  "scripts": {
+    "build": "tsx scripts/build-registry.ts && tsup",
+    "dev": "tsup --watch",
+    "lint": "biome check src scripts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@letterkit/theme": "workspace:*",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "glob": "^11.0.1",
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

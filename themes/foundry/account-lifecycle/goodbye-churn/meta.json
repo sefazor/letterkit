@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "goodbye-churn",
+  "description": "Thanks for trying Acme — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

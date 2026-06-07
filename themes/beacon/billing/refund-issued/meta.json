@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "refund-issued",
+  "description": "refund issued email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

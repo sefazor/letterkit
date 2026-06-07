@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "weekly-digest",
+  "description": "Your weekly digest — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

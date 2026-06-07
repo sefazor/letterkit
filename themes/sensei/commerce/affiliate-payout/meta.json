@@ -1,0 +1,9 @@
+{
+  "category": "commerce",
+  "name": "affiliate-payout",
+  "description": "Affiliate payout processed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

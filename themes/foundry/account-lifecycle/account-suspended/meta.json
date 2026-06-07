@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "account-suspended",
+  "description": "Your account is suspended — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

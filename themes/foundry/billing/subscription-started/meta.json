@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "subscription-started",
+  "description": "Subscription started — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

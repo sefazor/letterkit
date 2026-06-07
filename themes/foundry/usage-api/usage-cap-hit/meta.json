@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "usage-cap-hit",
+  "description": "API usage cap reached — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

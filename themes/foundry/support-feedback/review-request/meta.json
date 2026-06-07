@@ -1,0 +1,9 @@
+{
+  "category": "support-feedback",
+  "name": "review-request",
+  "description": "Would you leave a quick review? — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

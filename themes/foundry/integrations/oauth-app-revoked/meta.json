@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "oauth-app-revoked",
+  "description": "OAuth app access revoked — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

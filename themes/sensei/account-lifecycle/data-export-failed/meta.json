@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "data-export-failed",
+  "description": "Data export failed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

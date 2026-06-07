@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "data-export-ready",
+  "description": "Your data export is ready — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

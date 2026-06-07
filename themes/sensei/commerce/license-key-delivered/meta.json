@@ -1,0 +1,9 @@
+{
+  "category": "commerce",
+  "name": "license-key-delivered",
+  "description": "Your license key is ready — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

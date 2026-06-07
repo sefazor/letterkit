@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "realtime-alert",
+  "description": "Real-time alert triggered — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

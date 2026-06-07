@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "api-key-rotated",
+  "description": "API key rotated — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

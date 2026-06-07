@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "project-status-change",
+  "description": "Project status changed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

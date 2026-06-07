@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "trial-ending-3-days",
+  "description": "3 days left in trial — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

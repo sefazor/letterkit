@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "welcome-email-confirmed",
+  "description": "Email confirmed successfully — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "support-feedback",
+  "name": "nps-survey",
+  "description": "How likely are you to recommend Acme? — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

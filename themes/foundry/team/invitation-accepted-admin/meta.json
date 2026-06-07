@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "invitation-accepted-admin",
+  "description": "Invitation accepted — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

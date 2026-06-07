@@ -1,0 +1,9 @@
+{
+  "category": "auth",
+  "name": "account-deleted",
+  "description": "account deleted email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

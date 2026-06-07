@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "email-changed-confirmation",
+  "description": "Email address updated — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

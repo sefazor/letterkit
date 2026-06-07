@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "welcome-post-signup",
+  "description": "Welcome to Acme — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

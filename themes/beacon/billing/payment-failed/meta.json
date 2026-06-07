@@ -1,0 +1,7 @@
+{
+  "category": "billing",
+  "name": "payment-failed",
+  "description": "Failed payment notice with retry CTA.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

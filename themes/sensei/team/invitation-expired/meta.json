@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "invitation-expired",
+  "description": "Team invitation expired — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

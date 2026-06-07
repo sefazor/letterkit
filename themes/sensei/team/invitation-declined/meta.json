@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "invitation-declined",
+  "description": "Invitation declined — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

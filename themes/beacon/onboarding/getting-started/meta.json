@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "getting-started",
+  "description": "getting started email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "onboarding-complete",
+  "description": "Onboarding complete — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

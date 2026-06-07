@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "custom-reminder",
+  "description": "Custom reminder — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

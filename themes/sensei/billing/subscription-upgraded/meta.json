@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "subscription-upgraded",
+  "description": "Plan upgraded — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

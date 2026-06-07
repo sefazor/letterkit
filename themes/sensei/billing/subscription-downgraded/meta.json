@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "subscription-downgraded",
+  "description": "Plan downgraded — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

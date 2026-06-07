@@ -1,0 +1,7 @@
+{
+  "category": "auth",
+  "name": "verify-email",
+  "description": "Email verification with branded CTA and fallback link.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

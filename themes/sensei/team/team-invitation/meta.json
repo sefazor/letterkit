@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "team-invitation",
+  "description": "You are invited to Acme Product — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

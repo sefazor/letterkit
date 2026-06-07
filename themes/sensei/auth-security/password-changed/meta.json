@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "password-changed",
+  "description": "Your Acme password was changed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

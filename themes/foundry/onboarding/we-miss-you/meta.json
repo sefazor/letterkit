@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "we-miss-you",
+  "description": "We miss you at Acme — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

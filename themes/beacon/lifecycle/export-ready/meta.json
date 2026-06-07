@@ -1,0 +1,9 @@
+{
+  "category": "lifecycle",
+  "name": "export-ready",
+  "description": "export ready email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

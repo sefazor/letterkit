@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "security-advisory",
+  "description": "Security advisory — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

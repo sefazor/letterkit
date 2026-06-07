@@ -1,0 +1,9 @@
+{
+  "category": "lifecycle",
+  "name": "profile-completed",
+  "description": "profile completed email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

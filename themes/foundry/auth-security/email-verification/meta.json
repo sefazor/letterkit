@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "email-verification",
+  "description": "Verify your Acme email — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "member-joined",
+  "description": "New member joined workspace — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

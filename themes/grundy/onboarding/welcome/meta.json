@@ -1,0 +1,7 @@
+{
+  "category": "onboarding",
+  "name": "welcome",
+  "description": "Welcome email with getting-started CTA.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "trial-ending",
+  "description": "trial ending email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

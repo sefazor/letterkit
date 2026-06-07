@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "account-permanently-deleted",
+  "description": "Account permanently deleted — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

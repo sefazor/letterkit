@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "approval-requested",
+  "description": "Approval requested — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

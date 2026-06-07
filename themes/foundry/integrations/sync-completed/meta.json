@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "sync-completed",
+  "description": "Integration sync completed — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

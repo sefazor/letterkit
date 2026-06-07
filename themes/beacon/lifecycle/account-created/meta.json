@@ -1,0 +1,7 @@
+{
+  "category": "lifecycle",
+  "name": "account-created",
+  "description": "Account creation confirmation with next steps.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

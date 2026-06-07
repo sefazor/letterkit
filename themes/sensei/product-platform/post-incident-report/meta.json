@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "post-incident-report",
+  "description": "Post-incident report available — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

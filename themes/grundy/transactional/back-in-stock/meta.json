@@ -1,0 +1,9 @@
+{
+  "category": "transactional",
+  "name": "back-in-stock",
+  "description": "back in stock email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

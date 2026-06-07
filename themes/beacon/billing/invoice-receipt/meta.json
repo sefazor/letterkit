@@ -1,0 +1,7 @@
+{
+  "category": "billing",
+  "name": "invoice-receipt",
+  "description": "Invoice receipt with line items and payment summary.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

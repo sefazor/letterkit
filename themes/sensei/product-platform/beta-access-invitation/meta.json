@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "beta-access-invitation",
+  "description": "You are invited to Acme beta — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

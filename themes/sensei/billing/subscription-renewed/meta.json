@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "subscription-renewed",
+  "description": "Subscription renewed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

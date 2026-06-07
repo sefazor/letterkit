@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "inactive-day-7",
+  "description": "Your Acme trial is waiting — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

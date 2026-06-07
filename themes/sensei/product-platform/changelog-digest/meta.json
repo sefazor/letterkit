@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "changelog-digest",
+  "description": "Acme changelog digest — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

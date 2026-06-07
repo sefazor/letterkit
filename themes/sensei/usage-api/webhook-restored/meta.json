@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "webhook-restored",
+  "description": "Webhook delivery restored — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

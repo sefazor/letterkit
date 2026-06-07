@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "workspace-ownership-transferred",
+  "description": "Workspace ownership transferred — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

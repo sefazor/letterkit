@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "password-reset-request",
+  "description": "Reset your Acme password — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

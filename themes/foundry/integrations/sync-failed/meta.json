@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "sync-failed",
+  "description": "Integration sync failed — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

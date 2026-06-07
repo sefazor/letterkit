@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "file-uploaded-processed",
+  "description": "File processed successfully — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

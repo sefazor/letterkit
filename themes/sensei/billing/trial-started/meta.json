@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "trial-started",
+  "description": "Your Acme trial has started — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

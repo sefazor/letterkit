@@ -1,0 +1,9 @@
+{
+  "category": "usage-api",
+  "name": "webhook-delivery-failure",
+  "description": "Webhook delivery failed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

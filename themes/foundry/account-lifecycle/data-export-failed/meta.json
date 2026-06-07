@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "data-export-failed",
+  "description": "Data export failed — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

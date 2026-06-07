@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "direct-message",
+  "description": "You received a direct message — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

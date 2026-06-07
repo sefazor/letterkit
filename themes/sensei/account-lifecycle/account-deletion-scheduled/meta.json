@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "account-deletion-scheduled",
+  "description": "Deletion is scheduled — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

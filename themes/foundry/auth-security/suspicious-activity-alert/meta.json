@@ -1,0 +1,9 @@
+{
+  "category": "auth-security",
+  "name": "suspicious-activity-alert",
+  "description": "Suspicious sign-in blocked — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "account-reactivated",
+  "description": "Your account is active again — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

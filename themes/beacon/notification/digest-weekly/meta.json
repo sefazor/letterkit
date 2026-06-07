@@ -1,0 +1,7 @@
+{
+  "category": "notification",
+  "name": "digest-weekly",
+  "description": "Weekly activity digest with highlights.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

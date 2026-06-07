@@ -1,0 +1,9 @@
+{
+  "category": "product-update",
+  "name": "product-update",
+  "description": "product update email for the Beacon theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

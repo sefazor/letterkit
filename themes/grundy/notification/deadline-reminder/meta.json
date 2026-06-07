@@ -1,0 +1,9 @@
+{
+  "category": "notification",
+  "name": "deadline-reminder",
+  "description": "deadline reminder email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

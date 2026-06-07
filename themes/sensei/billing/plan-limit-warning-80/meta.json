@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "plan-limit-warning-80",
+  "description": "You reached 80% of your plan limit — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

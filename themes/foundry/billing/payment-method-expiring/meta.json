@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "payment-method-expiring",
+  "description": "Payment method expiring soon — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

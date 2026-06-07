@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "onboarding-complete",
+  "description": "Onboarding complete — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

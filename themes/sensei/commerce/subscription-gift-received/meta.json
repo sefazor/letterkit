@@ -1,0 +1,9 @@
+{
+  "category": "commerce",
+  "name": "subscription-gift-received",
+  "description": "You received an Acme gift subscription — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "payment-failed-attempt-1",
+  "description": "Payment attempt failed — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

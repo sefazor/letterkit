@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "sync-failed",
+  "description": "Integration sync failed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

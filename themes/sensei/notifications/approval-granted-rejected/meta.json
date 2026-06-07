@@ -1,0 +1,9 @@
+{
+  "category": "notifications",
+  "name": "approval-granted-rejected",
+  "description": "Approval status updated — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

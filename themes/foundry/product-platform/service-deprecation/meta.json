@@ -1,0 +1,9 @@
+{
+  "category": "product-platform",
+  "name": "service-deprecation",
+  "description": "Service deprecation notice — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

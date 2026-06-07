@@ -1,0 +1,7 @@
+{
+  "category": "notification",
+  "name": "mention-alert",
+  "description": "Mention notification with excerpt and reply CTA.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

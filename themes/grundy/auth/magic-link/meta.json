@@ -1,0 +1,7 @@
+{
+  "category": "auth",
+  "name": "magic-link",
+  "description": "Passwordless magic link sign-in with security notice.",
+  "dependencies": ["@react-email/components"],
+  "registryDependencies": []
+}

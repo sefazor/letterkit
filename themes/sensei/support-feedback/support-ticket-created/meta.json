@@ -1,0 +1,9 @@
+{
+  "category": "support-feedback",
+  "name": "support-ticket-created",
+  "description": "Support ticket created — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

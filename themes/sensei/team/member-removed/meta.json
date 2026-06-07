@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "member-removed",
+  "description": "Member removed — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "account-lifecycle",
+  "name": "goodbye-churn",
+  "description": "Thanks for trying Acme — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

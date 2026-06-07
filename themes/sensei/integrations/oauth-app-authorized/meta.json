@@ -1,0 +1,9 @@
+{
+  "category": "integrations",
+  "name": "oauth-app-authorized",
+  "description": "OAuth app authorized — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

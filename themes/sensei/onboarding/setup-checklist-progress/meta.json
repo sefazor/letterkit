@@ -1,0 +1,9 @@
+{
+  "category": "onboarding",
+  "name": "setup-checklist-progress",
+  "description": "Your setup checklist progress — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

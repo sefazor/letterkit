@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "workspace-deleted",
+  "description": "Workspace deleted — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

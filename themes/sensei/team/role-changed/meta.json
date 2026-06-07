@@ -1,0 +1,9 @@
+{
+  "category": "team",
+  "name": "role-changed",
+  "description": "Role updated — Sensei SaaS email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

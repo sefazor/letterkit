@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "subscription-renewed",
+  "description": "subscription renewed email for the Grundy theme.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}

@@ -1,0 +1,9 @@
+{
+  "category": "billing",
+  "name": "trial-ended",
+  "description": "Trial ended — Foundry email.",
+  "dependencies": [
+    "@react-email/components"
+  ],
+  "registryDependencies": []
+}
