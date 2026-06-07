@@ -1,4 +1,5 @@
 import { Heading } from '@react-email/components';
+import type { ReactNode } from 'react';
 import { FONT_DISPLAY } from './fonts';
 import { getActiveLifecycleTokens } from './token-context';
 
@@ -6,7 +7,7 @@ export function LifecycleTitle({
   children,
   size = 'h2',
 }: {
-  children: string;
+  children: ReactNode;
   size?: 'hero' | 'h2' | 'h3';
 }) {
   const tokens = getActiveLifecycleTokens();

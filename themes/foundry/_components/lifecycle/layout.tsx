@@ -52,7 +52,7 @@ export function LifecycleLayout({
         />
         <Font
           fontFamily="JetBrains Mono"
-          fallbackFontFamily={['ui-monospace', 'monospace']}
+          fallbackFontFamily={['monospace']}
           webFont={{
             url: 'https://fonts.gstatic.com/s/jetbrainsmono/v20/tDbY2o-flEEny0FZhsfKu5WU4xD7OgnTzj0AY7HxQg.woff2',
             format: 'woff2',

@@ -1,7 +1,8 @@
 import { Heading } from '@react-email/components';
+import type { ReactNode } from 'react';
 import { getActiveLifecycleTokens } from './token-context';
 
-export function LifecycleTitle({ children }: { children: string }) {
+export function LifecycleTitle({ children }: { children: ReactNode }) {
   const tokens = getActiveLifecycleTokens();
 
   return (
