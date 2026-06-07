@@ -1,47 +1,64 @@
 /**
  * Letterkit brand assets — shared across all themes.
  *
- * Put your logo SVG here:
- *   themes/_brand/letterkit-logo.svg
- *
- * It is served at /brand/letterkit-logo.svg during www preview.
- * In production emails, use an absolute HTTPS URL to the same file on your CDN.
+ * Source files: themes/_brand/letterkit-logo.svg (+ light variant)
+ * Production CDN: https://cdn.letterkit.dev/letterkit-logo.svg
+ * Local dev fallback: /brand/* route on www
  */
+
+export const LETTERKIT_CDN_ORIGIN = 'https://cdn.letterkit.dev';
 
 export const letterkitBrand = {
   appName: 'Letterkit',
   logoAlt: 'Letterkit',
-  /** Path relative to your asset host (www, CDN, etc.) */
-  logoPath: '/brand/letterkit-logo.svg',
-  /** White wordmark for dark email surfaces (e.g. Foundry, Beacon). */
-  logoLightPath: '/brand/letterkit-logo-light.svg',
+  logoFile: 'letterkit-logo.svg',
+  logoLightFile: 'letterkit-logo-light.svg',
+  /** Served by apps/www /brand/* in local dev */
+  localLogoPath: '/brand/letterkit-logo.svg',
+  localLogoLightPath: '/brand/letterkit-logo-light.svg',
 } as const;
 
 /** Wordmark dimensions for email <Img> (matches letterkit-logo.svg viewBox). */
 export const LETTERKIT_LOGO_WIDTH = 118;
 export const LETTERKIT_LOGO_HEIGHT = 22;
 
+function cdnOrigin(): string {
+  const fromEnv =
+    typeof process !== 'undefined' ? process.env.LETTERKIT_CDN_URL?.replace(/\/$/, '') : undefined;
+  return fromEnv || LETTERKIT_CDN_ORIGIN;
+}
+
+function useLocalBrandAssets(assetBase?: string): boolean {
+  return Boolean(assetBase?.includes('localhost') || assetBase?.startsWith('http://127'));
+}
+
 /**
- * Build an absolute logo URL for email <Img src="...">.
- * Email clients require HTTPS — never use relative paths in sent mail.
+ * Absolute logo URL for email <Img src="...">.
+ * Production uses CDN; localhost uses /brand/* proxy.
  */
-export function letterkitLogoUrl(baseUrl = 'https://letterkit.dev'): string {
-  return `${baseUrl.replace(/\/$/, '')}${letterkitBrand.logoPath}`;
+export function letterkitLogoUrl(assetBase?: string): string {
+  if (useLocalBrandAssets(assetBase)) {
+    return `${assetBase!.replace(/\/$/, '')}${letterkitBrand.localLogoPath}`;
+  }
+  return `${cdnOrigin()}/${letterkitBrand.logoFile}`;
 }
 
-/** White wordmark — use on dark backgrounds where the default black logo is invisible. */
-export function letterkitLogoLightUrl(baseUrl = 'https://letterkit.dev'): string {
-  return `${baseUrl.replace(/\/$/, '')}${letterkitBrand.logoLightPath}`;
+/** White wordmark for dark email surfaces (Beacon, Foundry). */
+export function letterkitLogoLightUrl(assetBase?: string): string {
+  if (useLocalBrandAssets(assetBase)) {
+    return `${assetBase!.replace(/\/$/, '')}${letterkitBrand.localLogoLightPath}`;
+  }
+  return `${cdnOrigin()}/${letterkitBrand.logoLightFile}`;
 }
 
-/** True when the URL is missing or uses the default black wordmark path. */
+/** True when the URL is missing or still the default black wordmark. */
 export function isLetterkitDefaultLogo(url?: string): boolean {
   if (!url) return true;
-  return url.includes('/brand/letterkit-logo.svg');
+  return url.includes('letterkit-logo.svg') && !url.includes('letterkit-logo-light');
 }
 
 export function isLetterkitLightLogo(url?: string): boolean {
-  return Boolean(url?.includes('/brand/letterkit-logo-light.svg'));
+  return Boolean(url?.includes('letterkit-logo-light.svg'));
 }
 
 export function previewOriginFromLogoUrl(url?: string): string | undefined {
@@ -53,25 +70,23 @@ export function previewOriginFromLogoUrl(url?: string): string | undefined {
   }
 }
 
-/** Resolve logo URL — keeps preview/CDN URLs, injects default wordmark when missing. */
-export function resolveLetterkitLogoUrl(logoUrl?: string, baseUrl?: string): string {
+/** Resolve logo URL — keeps custom URLs, injects CDN wordmark when missing/default. */
+export function resolveLetterkitLogoUrl(logoUrl?: string, assetBase?: string): string {
   if (logoUrl && !isLetterkitDefaultLogo(logoUrl)) {
     return logoUrl;
   }
-  const origin = baseUrl ?? previewOriginFromLogoUrl(logoUrl);
-  return letterkitLogoUrl(origin);
+  return letterkitLogoUrl(assetBase ?? previewOriginFromLogoUrl(logoUrl));
 }
 
 /** Dark-surface themes: swap default black wordmark for white. */
-export function resolveLetterkitLogoLightUrl(logoUrl?: string, baseUrl?: string): string {
+export function resolveLetterkitLogoLightUrl(logoUrl?: string, assetBase?: string): string {
   if (isLetterkitLightLogo(logoUrl)) {
     return logoUrl!;
   }
   if (logoUrl && !isLetterkitDefaultLogo(logoUrl)) {
     return logoUrl;
   }
-  const origin = baseUrl ?? previewOriginFromLogoUrl(logoUrl);
-  return letterkitLogoLightUrl(origin);
+  return letterkitLogoLightUrl(assetBase ?? previewOriginFromLogoUrl(logoUrl));
 }
 
 /** Default props merged into every template preview and send call. */

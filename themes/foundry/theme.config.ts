@@ -6,9 +6,9 @@ export const foundry: ThemeConfig = {
   name: 'Foundry',
   tagline: 'Editorial weight. Zero ornament.',
   description:
-    'Dark-first brutalist editorial. For dev tools, changelogs, premium SaaS that means it.',
+    'Dark-first brutalist editorial. For dev tools, changelogs, and SaaS that means it.',
   author: 'letterkit',
-  tier: 'pro',
+  tier: 'free',
   tokens: {
     colors: {
       background: foundryTokens.card,

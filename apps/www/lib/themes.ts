@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { headers } from 'next/headers';
 import { render } from '@react-email/render';
 import {
   getBlock,
@@ -28,12 +29,46 @@ const BRAND_PROP_KEYS = [
   'copyrightYear',
 ] as const;
 
-function previewAssetBaseUrl(): string {
-  return (
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.VERCEL_URL?.replace(/^/, 'https://') ??
-    'http://localhost:3000'
-  );
+function originFromRequestHeaders(headerList: Headers): string | undefined {
+  const host = headerList.get('x-forwarded-host') ?? headerList.get('host');
+  if (!host) return undefined;
+
+  const proto = headerList.get('x-forwarded-proto') ?? (host.includes('localhost') ? 'http' : 'https');
+  return `${proto}://${host}`;
+}
+
+/** Absolute origin for email preview assets (logos must be HTTPS in rendered HTML). */
+export function resolvePreviewAssetBaseUrl(requestOrigin?: string): string {
+  if (requestOrigin) {
+    return requestOrigin.replace(/\/$/, '');
+  }
+
+  const fromEnv = process.env.LETTERKIT_SITE_URL ?? process.env.NEXT_PUBLIC_SITE_URL;
+  if (fromEnv) {
+    return fromEnv.replace(/\/$/, '');
+  }
+
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+
+  if (process.env.NODE_ENV === 'production') {
+    return 'https://letterkit.dev';
+  }
+
+  return 'http://localhost:3000';
+}
+
+export async function getRequestOrigin(): Promise<string | undefined> {
+  try {
+    return originFromRequestHeaders(await headers());
+  } catch {
+    return undefined;
+  }
+}
+
+export function getRequestOriginFromRequest(request: Request): string | undefined {
+  return originFromRequestHeaders(request.headers);
 }
 
 function isPlaceholderLogo(url: unknown): boolean {
@@ -46,17 +81,18 @@ function isPlaceholderLogo(url: unknown): boolean {
 function mergeBrandLogo(
   brand: Record<string, unknown>,
   themeId?: string,
+  requestOrigin?: string,
 ): Record<string, unknown> {
   const next = { ...brand };
   const logoUrl = next.logoUrl;
-  const baseUrl = previewAssetBaseUrl();
+  const assetBase = resolvePreviewAssetBaseUrl(requestOrigin);
 
   const usesLightLogo = themeId === 'foundry' || themeId === 'beacon';
 
   if (!logoUrl || isPlaceholderLogo(logoUrl)) {
-    next.logoUrl = usesLightLogo ? letterkitLogoLightUrl(baseUrl) : letterkitLogoUrl(baseUrl);
+    next.logoUrl = usesLightLogo ? letterkitLogoLightUrl(assetBase) : letterkitLogoUrl(assetBase);
   } else if (usesLightLogo && isLetterkitDefaultLogo(String(logoUrl)) && !String(logoUrl).includes('letterkit-logo-light.svg')) {
-    next.logoUrl = letterkitLogoLightUrl(baseUrl);
+    next.logoUrl = letterkitLogoLightUrl(assetBase);
   }
   next.logoAlt = next.logoAlt ?? 'Letterkit';
 
@@ -100,6 +136,7 @@ function mergeThemeTokens(
 function mergePreviewProps(
   themeId: string,
   previewProps: Record<string, unknown>,
+  requestOrigin?: string,
 ): Record<string, unknown> {
   const theme = getTheme(themeId);
   const themeBrand =
@@ -120,7 +157,7 @@ function mergePreviewProps(
   );
 
   const content = stripBrandKeys(previewProps);
-  const brand = mergeBrandLogo({ ...themeBrand, ...legacyBrand, ...override }, themeId);
+  const brand = mergeBrandLogo({ ...themeBrand, ...legacyBrand, ...override }, themeId, requestOrigin);
   const tokens = mergeThemeTokens(themeId, previewProps);
 
   return tokens ? { ...content, brand, tokens } : { ...content, brand };
@@ -129,14 +166,17 @@ function mergePreviewProps(
 /**
  * Theme brand defaults with preview logo URL resolved.
  */
-export function getResolvedThemeBrand(themeId: string): Record<string, unknown> {
+export function getResolvedThemeBrand(
+  themeId: string,
+  requestOrigin?: string,
+): Record<string, unknown> {
   const theme = getTheme(themeId);
   const themeBrand =
     theme?.defaultProps?.brand && typeof theme.defaultProps.brand === 'object'
       ? (theme.defaultProps.brand as Record<string, unknown>)
       : {};
 
-  return mergeBrandLogo({ ...themeBrand }, themeId);
+  return mergeBrandLogo({ ...themeBrand }, themeId, requestOrigin);
 }
 
 /** Theme design token defaults for the Try panel. */
@@ -194,10 +234,11 @@ export async function renderTemplateHtml(
   category: string,
   name: string,
   props?: Record<string, unknown>,
+  requestOrigin?: string,
 ): Promise<string> {
   const block = getThemeBlock(themeId, category, name);
   const rawProps = props ?? block?.previewProps ?? {};
-  const previewProps = mergePreviewProps(themeId, rawProps as Record<string, unknown>);
+  const previewProps = mergePreviewProps(themeId, rawProps as Record<string, unknown>, requestOrigin);
 
   const mod = await import(`../../../themes/${themeId}/${category}/${name}/index`);
   const Component = mod.default as (props: Record<string, unknown>) => React.ReactElement;

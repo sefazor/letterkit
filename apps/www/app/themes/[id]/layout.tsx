@@ -6,6 +6,7 @@ import { ThemeStudioHeader } from '@/components/theme-studio/theme-studio-header
 import { groupBlocksByCategory } from '@/lib/group-blocks';
 import {
   getAllThemes,
+  getRequestOrigin,
   getResolvedThemeBrand,
   getResolvedThemeTokens,
   getThemeBlocks,
@@ -28,7 +29,8 @@ export default async function ThemeStudioLayout({ children, params }: ThemeStudi
   const blocks = getThemeBlocks(id);
   const groups = groupBlocksByCategory(blocks);
   const themes = getAllThemes();
-  const initialBrand = getResolvedThemeBrand(id);
+  const requestOrigin = await getRequestOrigin();
+  const initialBrand = getResolvedThemeBrand(id, requestOrigin);
   const initialTokens = getResolvedThemeTokens(id);
 
   return (

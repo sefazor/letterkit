@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import { TemplateRegistrar } from '@/components/theme-studio/template-registrar';
 import { TemplateWorkspace } from '@/components/theme-studio/template-workspace';
 import {
+  getRequestOrigin,
   getResolvedThemeBrand,
   getResolvedThemeTokens,
   getTemplateSource,
@@ -23,10 +24,11 @@ export default async function TemplatePage({ params }: TemplatePageProps) {
     notFound();
   }
 
-  const html = await renderTemplateHtml(id, category, name);
+  const requestOrigin = await getRequestOrigin();
+  const html = await renderTemplateHtml(id, category, name, undefined, requestOrigin);
   const source = getTemplateSource(id, category, name);
 
-  const themeBrand = getResolvedThemeBrand(id);
+  const themeBrand = getResolvedThemeBrand(id, requestOrigin);
 
   return (
     <>

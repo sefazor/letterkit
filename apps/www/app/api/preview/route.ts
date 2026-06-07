@@ -1,4 +1,4 @@
-import { renderTemplateHtml } from '@/lib/themes';
+import { getRequestOriginFromRequest, renderTemplateHtml } from '@/lib/themes';
 
 export async function POST(request: Request) {
   const body = (await request.json()) as {
@@ -15,7 +15,8 @@ export async function POST(request: Request) {
   }
 
   try {
-    const html = await renderTemplateHtml(themeId, category, name, props);
+    const requestOrigin = getRequestOriginFromRequest(request);
+    const html = await renderTemplateHtml(themeId, category, name, props, requestOrigin);
     return Response.json({ html });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Render failed';
