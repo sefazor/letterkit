@@ -1,0 +1,13 @@
+# Coolify / Nixpacks — letterkit monorepo (apps/www)
+[variables]
+NODE_ENV = "production"
+NIXPACKS_NODE_VERSION = "22"
+
+[phases.install]
+cmds = ["pnpm install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["pnpm turbo build --filter=www"]
+
+[start]
+cmd = "pnpm --filter www start"
