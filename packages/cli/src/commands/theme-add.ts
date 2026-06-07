@@ -4,6 +4,7 @@ import ora from 'ora';
 import pc from 'picocolors';
 import { readConfig, getRegistryUrl } from '../config.js';
 import { loadRegistry, type Theme } from '../registry-client.js';
+import { installTemplateDependencies, uniqueDependencies } from '../install-deps.js';
 import { writeThemeFiles } from './add-shared.js';
 
 /**
@@ -51,4 +52,9 @@ export async function themeAddCommand(themeId: string, cwd: string = process.cwd
 
   console.log(pc.green(`\n✓ Installed ${theme.blocks.length} templates (${totalWritten} files written)`));
   console.log(pc.dim(`Path: ${config.components}/${themeId}/`));
+
+  if (totalWritten > 0) {
+    const dependencies = uniqueDependencies(theme.blocks.flatMap((block) => block.dependencies));
+    installTemplateDependencies(cwd, dependencies);
+  }
 }

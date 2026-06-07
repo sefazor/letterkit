@@ -1,17 +1,15 @@
 import { CommandLine } from '@/components/marketing/command-line';
 
 interface ThemesHeaderProps {
-  themeCount: number;
-  templateCount: number;
   featuredThemeId: string;
 }
 
-export function ThemesHeader({ themeCount, templateCount, featuredThemeId }: ThemesHeaderProps) {
+export function ThemesHeader({ featuredThemeId }: ThemesHeaderProps) {
   return (
     <section className="mb-16 pt-2 text-center">
       <div className="mx-auto max-w-2xl">
         <p className="text-[15px] text-muted-foreground">
-          {themeCount} themes · {templateCount} templates
+          Curated collections with shared layout and design tokens
         </p>
 
         <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]">
@@ -27,7 +25,7 @@ export function ThemesHeader({ themeCount, templateCount, featuredThemeId }: The
           <CommandLine
             stacked
             comment="Install every template from a theme"
-            command={`npx letterkit theme add ${featuredThemeId}`}
+            command={`npx @letterkit/cli@latest theme add ${featuredThemeId}`}
           />
         </div>
       </div>

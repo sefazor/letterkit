@@ -8,3 +8,8 @@ dist
 !.env.example
 *.tsbuildinfo
 coverage
+
+# Local AI / editor artifacts — never commit
+prompt.txt
+.cursor/
+.aider*

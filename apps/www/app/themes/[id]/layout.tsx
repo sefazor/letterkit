@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { createSiteMetadata } from '@/lib/site';
 import { StudioProvider } from '@/components/theme-studio/studio-context';
 import { ThemeSidebar } from '@/components/theme-studio/theme-sidebar';
 import { ThemeStudioBody } from '@/components/theme-studio/theme-studio-body';
@@ -16,6 +18,22 @@ import {
 interface ThemeStudioLayoutProps {
   children: React.ReactNode;
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: ThemeStudioLayoutProps): Promise<Metadata> {
+  const { id } = await params;
+  const theme = getThemeById(id);
+
+  if (!theme) {
+    return createSiteMetadata({ title: 'Theme not found', noIndex: true });
+  }
+
+  return createSiteMetadata({
+    title: `${theme.name} theme`,
+    description: theme.description,
+    path: `/themes/${theme.id}`,
+    keywords: [theme.name.toLowerCase(), theme.id, 'react email theme', 'email templates'],
+  });
 }
 
 export default async function ThemeStudioLayout({ children, params }: ThemeStudioLayoutProps) {

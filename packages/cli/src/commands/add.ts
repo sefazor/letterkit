@@ -4,6 +4,7 @@ import ora from 'ora';
 import pc from 'picocolors';
 import { readConfig, getRegistryUrl } from '../config.js';
 import { loadRegistry, type Theme } from '../registry-client.js';
+import { installTemplateDependencies } from '../install-deps.js';
 import { writeThemeFiles } from './add-shared.js';
 
 interface ResolvedBlock {
@@ -97,9 +98,8 @@ export async function addCommand(arg: string, cwd: string = process.cwd()): Prom
   console.log(pc.bold(`\nAdding ${themeId}/${category}/${name}…`));
   const written = writeThemeFiles(theme, block, config.components, cwd, writeShared);
 
-  if (block.dependencies.length > 0) {
-    console.log(pc.bold('\nInstall dependencies:'));
-    console.log(pc.cyan(`  pnpm add ${block.dependencies.join(' ')}`));
+  if (written.length > 0 && block.dependencies.length > 0) {
+    installTemplateDependencies(cwd, block.dependencies);
   }
 
   if (written.length === 0) {

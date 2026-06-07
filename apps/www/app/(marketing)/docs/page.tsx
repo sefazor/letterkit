@@ -1,27 +1,42 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CommandLine } from '@/components/marketing/command-line';
+import { createSiteMetadata } from '@/lib/site';
 import { getAllThemes } from '@/lib/themes';
+
+export const metadata: Metadata = createSiteMetadata({
+  title: 'Documentation',
+  description:
+    'Install letterkit themes with the CLI. Init your project, add themes or single templates, and customize React Email blocks in your codebase.',
+  path: '/docs',
+  keywords: [
+    'letterkit cli',
+    'react email cli',
+    'email template install',
+    'npx letterkit',
+  ],
+});
 
 const COMMANDS = [
   {
     comment: 'Create letterkit.json in your project',
-    command: 'npx letterkit init',
+    command: 'npx @letterkit/cli@latest init',
   },
   {
-    comment: 'Install a full theme with all templates',
-    command: 'npx letterkit theme add sensei',
+    comment: 'Install a full theme with all templates (+ peer deps)',
+    command: 'npx @letterkit/cli@latest theme add sensei',
   },
   {
     comment: 'Add a single template',
-    command: 'npx letterkit add sensei/onboarding/we-miss-you',
+    command: 'npx @letterkit/cli@latest add sensei/onboarding/we-miss-you',
   },
   {
-    comment: 'List available themes',
-    command: 'npx letterkit list',
+    comment: 'List available themes (after install: letterkit list)',
+    command: 'npx @letterkit/cli@latest list',
   },
   {
     comment: 'List templates in a theme',
-    command: 'npx letterkit list --theme sensei',
+    command: 'npx @letterkit/cli@latest list --theme sensei',
   },
 ] as const;
 
@@ -108,7 +123,7 @@ export default function DocsPage() {
         <p className="text-base leading-relaxed text-muted-foreground">
           Want to add a theme? See{' '}
           <a
-            href="https://github.com/letterkit/letterkit/blob/main/CONTRIBUTING.md"
+            href="https://github.com/sefazor/letterkit/blob/main/CONTRIBUTING.md"
             className="font-medium text-foreground hover:text-foreground/70"
             target="_blank"
             rel="noreferrer"

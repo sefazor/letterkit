@@ -1,22 +1,27 @@
+import type { Metadata } from 'next';
 import { Hero } from '@/components/marketing/hero';
 import { ThemeCard } from '@/components/marketing/theme-card';
+import { createSiteMetadata } from '@/lib/site';
 import { getAllThemes } from '@/lib/themes';
 import Link from 'next/link';
 
+export const metadata: Metadata = createSiteMetadata({
+  path: '/',
+});
+
 export default function HomePage() {
   const themes = getAllThemes();
-  const totalTemplates = themes.reduce((sum, theme) => sum + theme.blocks.length, 0);
 
   return (
     <div className="mx-auto max-w-5xl px-6 pb-20">
-      <Hero featuredThemeId={themes[0]?.id ?? 'sensei'} themeCount={themes.length} />
+      <Hero featuredThemeId={themes[0]?.id ?? 'sensei'} />
 
       <section className="mb-16">
         <div className="mb-6 flex items-end justify-between gap-4">
           <div>
             <h2 className="text-xl font-semibold tracking-tight">Themes</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              {themes.length} themes · {totalTemplates} templates
+              Browse collections and open the studio
             </p>
           </div>
           <Link href="/themes" className="text-sm text-muted-foreground hover:text-foreground">

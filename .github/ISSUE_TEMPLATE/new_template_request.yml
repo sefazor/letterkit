@@ -1,0 +1,60 @@
+name: New template request
+description: Request a new email template for an existing theme
+title: "[template]: "
+labels: ["template"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New templates should fit an existing theme's design system and a real product workflow.
+
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Theme
+      options:
+        - grundy
+        - beacon
+        - foundry
+        - sensei
+        - new theme (describe below)
+    validations:
+      required: true
+
+  - type: input
+    id: category
+    attributes:
+      label: Category
+      placeholder: "auth, billing, notification, …"
+    validations:
+      required: true
+
+  - type: input
+    id: template-name
+    attributes:
+      label: Template name (kebab-case)
+      placeholder: "password-expired"
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: When is this email sent? What data does it need?
+    validations:
+      required: true
+
+  - type: textarea
+    id: content-outline
+    attributes:
+      label: Content outline
+      description: Subject, headline, CTA, key fields (order ID, expiry, etc.)
+
+  - type: checkboxes
+    id: references
+    attributes:
+      label: References
+      options:
+        - label: I checked this template does not already exist on letterkit.dev
+          required: true

@@ -4,15 +4,14 @@ import Link from 'next/link';
 
 interface HeroProps {
   featuredThemeId: string;
-  themeCount: number;
 }
 
-export function Hero({ featuredThemeId, themeCount }: HeroProps) {
+export function Hero({ featuredThemeId }: HeroProps) {
   return (
     <section className="mb-24 pt-6 text-center">
       <div className="mx-auto max-w-2xl">
         <p className="text-[15px] text-muted-foreground">
-          {themeCount} different templates
+          Transactional email themes for React Email
         </p>
 
         <h1 className="mt-4 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.08]">
@@ -25,11 +24,15 @@ export function Hero({ featuredThemeId, themeCount }: HeroProps) {
         </p>
 
         <div className="mx-auto mt-10 max-w-xl space-y-3 text-left">
-          <CommandLine stacked comment="Initialize letterkit" command="npx letterkit init" />
+          <CommandLine
+            stacked
+            comment="Initialize letterkit"
+            command="npx @letterkit/cli@latest init"
+          />
           <CommandLine
             stacked
             comment="Install a theme"
-            command={`npx letterkit theme add ${featuredThemeId}`}
+            command={`npx @letterkit/cli@latest theme add ${featuredThemeId}`}
           />
         </div>
 

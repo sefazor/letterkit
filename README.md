@@ -1,63 +1,77 @@
-<!-- HERO_IMAGE -->
+<p align="center">
+  <img src="./docs/img/grundy-welcome.png" alt="Grundy welcome email template preview" width="720" />
+</p>
 
 # letterkit
 
 **Copy-paste transactional email themes for React Email.**
 
+letterkit ships curated theme collections — not loose components — so the emails your app sends share one design system. Run `npx @letterkit/cli@latest theme add`, own the source, customize freely.
+
 [![npm version](https://img.shields.io/npm/v/@letterkit/cli.svg)](https://www.npmjs.com/package/@letterkit/cli)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
-[![stars](https://img.shields.io/github/stars/letterkit/letterkit.svg)](https://github.com/letterkit/letterkit)
-[![discord](https://img.shields.io/badge/discord-join-5865F2.svg)](https://discord.gg/letterkit)
+[![stars](https://img.shields.io/github/stars/sefazor/letterkit.svg)](https://github.com/sefazor/letterkit)
+[![website](https://img.shields.io/badge/website-letterkit.dev-black.svg)](https://letterkit.dev)
 
 ## ✨ Features
 
-- **Complete themes** — 52 templates per theme across 8 categories
+- **Complete themes** — 378 templates across 4 design systems
 - **Copy, don't install** — templates live in your repo, fully editable
-- **React Email + Tailwind** — modern DX with email-client-safe styling
+- **React Email** — modern DX with email-client-safe styling
 - **Registry-driven CLI** — install a full theme or individual templates
 - **Shared components** — consistent layout, header, footer per theme
-- **Contract-enforced** — every theme implements the same 52-template spec
+- **Auto peer deps** — CLI installs `@react-email/components` and other deps for you
 
 ## 🚀 Quickstart
 
 ```bash
-npx @letterkit/cli init
-npx @letterkit/cli theme add grundy
-pnpm add @react-email/components
+npx @letterkit/cli@latest init
+npx @letterkit/cli@latest theme add grundy
 ```
+
+After the first install, use the local binary:
+
+```bash
+letterkit list
+letterkit theme add beacon
+letterkit add auth/verify-email
+```
+
+Browse and preview every template at [letterkit.dev/themes](https://letterkit.dev/themes).
 
 ## 🎨 Themes
 
-| Theme   | Templates | Tier | Description                                      |
-| ------- | --------- | ---- | ------------------------------------------------ |
-| Grundy  | 52        | free | Quiet, confident, modern. Cream & terracotta.      |
+| Theme   | Templates | Tier | Description |
+| ------- | --------- | ---- | ----------- |
+| Grundy  | 52        | free | Quiet, confident, modern. Cream & terracotta. |
+| Beacon  | 52        | free | Fintech feel. Forest signature, mono numerals, billing layouts. |
+| Foundry | 137       | free | Dark-first brutalist editorial. Dev tools & changelogs. |
+| Sensei  | 137       | free | Full SaaS suite — auth, billing, onboarding, integrations, and more. |
 
-More themes coming soon.
+<p align="center">
+  <img src="./docs/img/grundy-verify-email.png" alt="Grundy verify email template" width="360" />
+  &nbsp;&nbsp;
+  <img src="./docs/img/grundy-invoice-receipt.png" alt="Grundy invoice receipt template" width="360" />
+</p>
 
-Browse themes at [letterkit.dev/themes](https://letterkit.dev/themes).
+### Template coverage
 
-### 52-template contract
-
-Every theme includes templates across:
-
-- **auth** (7) — verify-email, magic-link, password-reset, …
-- **billing** (8) — invoice-receipt, payment-failed, subscription-started, …
-- **onboarding** (6) — welcome, getting-started, product-tour, …
-- **transactional** (8) — order-confirmation, shipping-confirmation, …
-- **notification** (8) — mention-alert, digest-weekly, …
-- **team** (5) — team-invitation, role-changed, …
-- **lifecycle** (5) — account-created, goodbye, …
-- **product-update** (5) — feature-announcement, security-alert, …
+Themes include templates across auth, billing, onboarding, transactional, notification, team, lifecycle, and product categories. [Browse the full catalog →](https://letterkit.dev/themes)
 
 ## 📦 CLI
 
 ```bash
+# Discover
 letterkit list                          # list themes
 letterkit list --theme grundy           # list templates in a theme
-letterkit theme add grundy              # install all 52 templates
-letterkit add auth/verify-email         # add single template (uses defaultTheme)
+
+# Install
+letterkit theme add grundy              # install all templates in a theme
+letterkit add auth/verify-email         # single template (uses defaultTheme)
 letterkit add grundy/auth/verify-email  # explicit theme path
 ```
+
+`theme add` and `add` detect your package manager (pnpm, npm, yarn, bun) and install template dependencies automatically.
 
 ## 🤝 Contributing
 

@@ -4,7 +4,6 @@ import {
   LETTERKIT_LOGO_SRC,
   letterkitLogoWidth,
 } from '@/lib/brand-assets';
-import { getAllThemes } from '@/lib/themes';
 import Link from 'next/link';
 
 const PRODUCT_LINKS = [
@@ -14,7 +13,7 @@ const PRODUCT_LINKS = [
 
 const COMMUNITY_LINKS = [
   {
-    href: 'https://github.com/letterkit/letterkit',
+    href: 'https://github.com/sefazor/letterkit',
     label: 'GitHub',
     external: true,
   },
@@ -25,8 +24,6 @@ const linkStyle = { color: 'var(--header-muted)' } as const;
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
-  const themes = getAllThemes();
-  const templateCount = themes.reduce((sum, theme) => sum + theme.blocks.length, 0);
 
   return (
     <footer className="mt-auto px-6 pb-6 pt-16">
@@ -47,9 +44,6 @@ export function SiteFooter() {
               style={{ color: 'var(--header-muted)' }}
             >
               Copy-paste transactional email themes for React Email.
-            </p>
-            <p className="mt-3 text-sm tabular-nums" style={{ color: 'var(--header-muted)' }}>
-              {themes.length} themes · {templateCount} templates
             </p>
           </div>
 

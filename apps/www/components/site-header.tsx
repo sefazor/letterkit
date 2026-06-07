@@ -60,7 +60,7 @@ export function SiteHeader() {
             iconClassName="text-[var(--header-muted)]"
           />
           <a
-            href="https://github.com/letterkit/letterkit"
+            href="https://github.com/sefazor/letterkit"
             target="_blank"
             rel="noreferrer"
             className="rounded-full px-5 py-2.5 text-sm font-medium transition-colors hover:opacity-90"

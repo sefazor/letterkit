@@ -11,14 +11,17 @@
     "test": "turbo test",
     "changeset": "changeset",
     "format": "biome format --write .",
-    "check": "biome check --write ."
+    "check": "biome check --write .",
+    "capture:readme": "tsx scripts/capture-readme-previews.mts"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@changesets/cli": "^2.27.10",
     "@react-email/components": "^0.0.31",
     "@types/react": "^19.0.2",
+    "playwright": "^1.49.1",
     "react": "^19.0.0",
+    "tsx": "^4.19.2",
     "turbo": "^2.3.3",
     "typescript": "^5.7.2"
   },

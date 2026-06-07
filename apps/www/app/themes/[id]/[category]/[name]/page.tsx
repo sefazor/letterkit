@@ -1,4 +1,6 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { createSiteMetadata } from '@/lib/site';
 import { TemplateRegistrar } from '@/components/theme-studio/template-registrar';
 import { TemplateWorkspace } from '@/components/theme-studio/template-workspace';
 import {
@@ -13,6 +15,25 @@ import {
 
 interface TemplatePageProps {
   params: Promise<{ id: string; category: string; name: string }>;
+}
+
+export async function generateMetadata({ params }: TemplatePageProps): Promise<Metadata> {
+  const { id, category, name } = await params;
+  const theme = getThemeById(id);
+  const block = getThemeBlock(id, category, name);
+
+  if (!theme || !block) {
+    return createSiteMetadata({ title: 'Template not found', noIndex: true });
+  }
+
+  const label = name.replace(/-/g, ' ');
+
+  return createSiteMetadata({
+    title: `${block.name} — ${theme.name}`,
+    description: block.description,
+    path: `/themes/${id}/${category}/${name}`,
+    keywords: [label, category, theme.name.toLowerCase(), 'react email template', 'transactional email'],
+  });
 }
 
 export default async function TemplatePage({ params }: TemplatePageProps) {

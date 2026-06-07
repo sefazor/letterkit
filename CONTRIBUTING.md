@@ -7,7 +7,7 @@ Thank you for helping build the copy-paste email block library for React Email.
 Requirements: Node 20+, pnpm 9.
 
 ```bash
-git clone https://github.com/letterkit/letterkit.git
+git clone https://github.com/sefazor/letterkit.git
 cd letterkit
 pnpm install
 pnpm build

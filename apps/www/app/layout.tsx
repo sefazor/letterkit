@@ -1,11 +1,8 @@
-import type { Metadata } from 'next';
 import { Providers } from '@/components/providers';
+import { createSiteMetadata } from '@/lib/site';
 import './globals.css';
 
-export const metadata: Metadata = {
-  title: 'letterkit — Copy-paste email themes for React Email',
-  description: 'Complete transactional email themes. Copy, customize, and ship.',
-};
+export const metadata = createSiteMetadata();
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
