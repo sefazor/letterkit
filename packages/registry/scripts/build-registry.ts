@@ -1,4 +1,4 @@
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { glob } from 'glob';
@@ -133,7 +133,12 @@ async function buildRegistry(): Promise<void> {
   });
 
   const outputPath = join(__dirname, '..', 'registry.json');
-  writeFileSync(outputPath, `${JSON.stringify(registry, null, 2)}\n`);
+  const registryJson = `${JSON.stringify(registry, null, 2)}\n`;
+  writeFileSync(outputPath, registryJson);
+
+  const publicRegistryDir = join(rootDir, 'apps', 'www', 'public', 'registry');
+  mkdirSync(publicRegistryDir, { recursive: true });
+  writeFileSync(join(publicRegistryDir, 'registry.json'), registryJson);
 
   const blockCount = themes.reduce((sum, t) => sum + t.blocks.length, 0);
   console.log(

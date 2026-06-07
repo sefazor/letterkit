@@ -1,4 +1,5 @@
 import { existsSync, readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { RegistrySchema, type Block, type Theme } from './schema.js';
@@ -6,9 +7,21 @@ import { RegistrySchema, type Block, type Theme } from './schema.js';
 export { RegistrySchema, type Block, type Theme } from './schema.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const require = createRequire(import.meta.url);
 
 /**
- * Resolve a local registry.json path for monorepo development.
+ * Registry shipped inside @letterkit/registry (npm install / npx).
+ */
+export function resolveBundledRegistryPath(): string | null {
+  try {
+    return require.resolve('@letterkit/registry/registry.json');
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Resolve registry.json for monorepo development.
  */
 export function resolveLocalRegistryPath(): string | null {
   if (process.env.LETTERKIT_REGISTRY_LOCAL) {
@@ -31,13 +44,19 @@ export function resolveLocalRegistryPath(): string | null {
 }
 
 /**
- * Load the registry from local file or remote URL.
+ * Load the registry: local dev → bundled npm package → remote URL.
  */
 export async function loadRegistry(registryUrl: string): Promise<Theme[]> {
   const localPath = resolveLocalRegistryPath();
   if (localPath) {
     return loadLocalRegistry(localPath);
   }
+
+  const bundledPath = resolveBundledRegistryPath();
+  if (bundledPath) {
+    return loadLocalRegistry(bundledPath);
+  }
+
   return fetchRegistry(registryUrl);
 }
 

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { LetterkitConfigSchema } from './config.js';
 import { resolveBlockArg } from './commands/add.js';
+import { resolveBundledRegistryPath, loadLocalRegistry } from './registry-client.js';
 
 describe('@letterkit/cli', () => {
   it('parses default config schema with defaultTheme', () => {
@@ -17,5 +18,14 @@ describe('@letterkit/cli', () => {
   it('resolves 3-segment path explicitly', () => {
     const result = resolveBlockArg('grundy/auth/verify-email', 'other');
     expect(result).toEqual({ themeId: 'grundy', category: 'auth', name: 'verify-email' });
+  });
+
+  it('loads bundled registry from @letterkit/registry', async () => {
+    const bundledPath = resolveBundledRegistryPath();
+    expect(bundledPath).toBeTruthy();
+
+    const themes = await loadLocalRegistry(bundledPath!);
+    expect(themes.length).toBeGreaterThan(0);
+    expect(themes.some((theme) => theme.id === 'beacon')).toBe(true);
   });
 });

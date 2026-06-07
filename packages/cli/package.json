@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "type": "module",
   "description": "CLI to add letterkit email blocks to your project",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sefazor/letterkit.git",
+    "directory": "packages/cli"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "letterkit": "./dist/index.js"
   },
@@ -21,6 +30,7 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@letterkit/registry": "workspace:*",
     "commander": "^12.1.0",
     "ora": "^8.1.1",
     "picocolors": "^1.1.1",

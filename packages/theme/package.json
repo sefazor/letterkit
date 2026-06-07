@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "type": "module",
   "description": "Design tokens for letterkit email blocks",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sefazor/letterkit.git",
+    "directory": "packages/theme"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",

@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "type": "module",
   "description": "Block manifest and schema for letterkit",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sefazor/letterkit.git",
+    "directory": "packages/registry"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
